@@ -1,0 +1,44 @@
+.field-item a {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: #00475d;
+    margin: 0;
+    padding: 5px 0;
+    position: relative;
+    top:-40px;
+}
+
+#highlighted {
+    top:10px;
+    width: 100%;
+    /*left: 21%;*/
+    height: 75px;
+}
+
+.field-item a:nth-of-type(3) {
+    text-decoration: underline;
+    /* Subraya el texto */
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+.field-item a:nth-of-type(3):hover {
+    text-decoration: underline;
+    /* Subraya el texto */
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+.close-button-panel {
+    position: absolute;
+    top: 40px;
+    left: 4px;
+    background-color: #c4262b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    display: none;
+    z-index: 100;
+}

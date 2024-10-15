@@ -1,0 +1,30 @@
+.header-top {
+    background-color: #ffffff;
+  }
+  .header {
+    background-color: #ffffff;
+    /*position:fixed;*/
+  }
+  .copyright {
+    display: none;
+  }
+  span {
+    display: none;
+  }
+  #footer {
+    display: block;  
+    background: white;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border-top: 4px solid #ffffff;
+    z-index: 0;
+  }
+  .field.field--name-body.field--type-text-with-summary.field--label-hidden.field-item {
+    position: relative;
+    left: 8%;
+}  
+.footer-bottom-middle-right {
+    display: none;
+}

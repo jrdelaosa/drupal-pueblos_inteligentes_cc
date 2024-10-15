@@ -1,0 +1,14 @@
+#block-tara-pdfboton {
+    background-color: #F8F9FA;
+    box-shadow: none !important;
+}
+aside.sidebar-right {
+    position: relative !important;
+    top: 3%;   
+    padding: 0;
+    left: 142%;
+}
+
+#sidebar-right img{
+    width: 11%;
+}

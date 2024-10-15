@@ -1,0 +1,168 @@
+.submenu-extrategicos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    padding: 20px;
+    background-color: #FFFFFF;
+   /* border-bottom: 1px #999 solid;*/
+   /* box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3)*/
+
+}
+
+/* Ajustes para pantallas medianas */
+@media (max-width: 768px) {
+    .submenu-extrategicos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 480px) {
+    .submenu-extrategicos {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Estilo para cada recuadro de objetivo */
+.recuadro_extrategico {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    background-color: #333; /* Fondo por defecto */
+}
+
+.recuadro_extrategico a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.recuadro_extrategico img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+.recuadro_extrategico p {
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.recuadro_extrategico:hover {
+    transform: scale(1.05);
+}
+
+/* Ajustes para el tamaño de texto en pantallas pequeñas */
+@media (max-width: 480px) {
+    .recuadro_extrategico p {
+        font-size: 14px;
+    }
+}
+#oe01 {
+    background-color: #A3C544;
+}
+
+/* Verde */
+#oe02 {
+    background-color: #006CB9;
+}
+
+/* Azul */
+#oe03 {
+    background-color: #00B0A5;
+}
+
+/* Turquesa */
+#oe04 {
+    background-color: #D29E54;
+}
+
+/* Marrón claro */
+#oe05 {
+    background-color: #F49800;
+}
+
+/* Naranja */
+#oe06 {
+    background-color: #FFD700;
+}
+
+/* Amarillo */
+#oe07 {
+    background-color: #E49ABE;
+}
+
+/* Rosa */
+#oe08 {
+    background-color: #937046;
+}
+
+/* Marrón */
+#oe09 {
+    background-color: #D83F3F;
+}
+
+/* Rojo */
+#oe10 {
+    background-color: #8B3B99;
+}
+
+/* Morado */
+#aue {
+    background-color: transparent;
+}
+
+/* Estilos específicos de fondo */
+.bg-oe01 {
+    background-color: #A3C544;
+}
+
+/* Verde */
+.bg-oe02 {
+    background-color: #006CB9;
+}
+
+/* Azul */
+.bg-oe03 {
+    background-color: #00B0A5;
+}
+
+/* Turquesa */
+.bg-oe04 {
+    background-color: #D29E54;
+}
+
+/* Marrón claro */
+.bg-oe05 {
+    background-color: #F49800;
+}
+
+/* Naranja */
+.bg-oe06 {
+    background-color: #FFD700;
+}
+
+/* Amarillo */
+.bg-oe07 {
+    background-color: #E49ABE;
+}
+
+/* Rosa */
+.bg-oe08 {
+    background-color: #937046;
+}
+
+/* Marrón */
+.bg-oe09 {
+    background-color: #D83F3F;
+}
+
+/* Rojo */
+.bg-oe10 {
+    background-color: #8B3B99;
+}

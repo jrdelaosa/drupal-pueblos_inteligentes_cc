@@ -1,0 +1,109 @@
+.home-botones {
+    background-color: #fafafa;
+    background-image: url(/dip_cc/web/sites/default/files/inline-images/Menús/fondo-seccion-V2.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 600px;
+    text-align: center;
+    padding-top: 160px;
+}
+
+.home-botones a {
+    position: relative;
+    display: inline-block;
+    width: 280px;
+    height: 280px;
+    text-align: center;
+    margin: 0 8px;
+    padding-top: 120px;
+    background-image: url(/dip_cc/web/sites/default/files/inline-images/Menús/home-botones-v2.png);
+    background-repeat: no-repeat;
+    background-position: left;
+    font-family: 'Telefonica', sans-serif;
+    font-size: 26px;
+    font-weight: 700;
+    color: #00475d;
+}
+
+.home-botones a:hover{
+	background-image: url(/dip_cc/web/sites/default/files/inline-images/Menús/home-boton-on.png);
+	color: #f4313f;
+}
+@media (max-width: 992px) {
+    .field.field--name-body.field--type-text-with-summary.field--label-hidden.field-item{
+        width: 100%;
+        margin-left: 1%;
+    }
+    .home-botones.content-wrap {
+        margin-right: 1%;
+    }
+	.patrocina-logos-cab{
+		width: 100%;
+		float: none;
+	}
+	.home-botones {
+		background-size: 413px;
+		height: 480px;
+		padding-top: 128px;
+	}
+	.home-botones a{
+		width: 207px;
+		height: 224px;
+		font-size: 22px;
+		padding-top: 100px;
+		background-size: 300%;
+	}
+	.home-botones a:hover{
+		background-size: 100%;	
+	}
+}
+
+@media (max-width: 768px) {
+    .field.field--name-body.field--type-text-with-summary.field--label-hidden.field-item{
+        width: 100%;
+        margin-left: 1%;
+    }
+    .home-botones.content-wrap {
+        margin-right: 1%;
+    }
+	.home-botones {
+		background-size: 310px;
+		height: 360px;
+		padding-top: 95px;
+	}
+	.home-botones a{
+		width: 168px;
+		height: 168px;
+		font-size: 16px;
+		padding-top: 60px;
+		/*background-size: 300%;*/
+	}
+	.home-botones a:hover{
+		background-size: 100%;	
+	}
+}
+
+@media (max-width: 576px) {
+    .field.field--name-body.field--type-text-with-summary.field--label-hidden.field-item{
+        width: 100%;
+        margin-left: 1%;
+    }
+    .home-botones.content-wrap {
+        margin-right: 1%;
+    }
+	.home-botones {	
+		background-size: 200px;
+		height: 250px;
+		padding-top: 80px;
+	}
+	.home-botones a{
+		width: 80px;
+		height: 80px;
+		font-size: 12px;
+		padding-top: 30px;
+		/*background-size: 300%;*/
+	}
+	.home-botones a:hover{
+		background-size: 100%;	
+	}
+}

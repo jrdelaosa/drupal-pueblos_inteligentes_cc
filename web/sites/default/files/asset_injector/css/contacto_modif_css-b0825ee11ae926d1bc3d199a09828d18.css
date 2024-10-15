@@ -1,0 +1,57 @@
+.contact-message-formulario-dipcc-form {
+    position: relative;
+}
+
+.contact-message-formulario-dipcc-form::before {
+    content: "";
+    display: block;
+    width: 499px;
+    /* Ajusta el ancho de la imagen */
+    height: 685px;
+    /* Ajusta la altura de la imagen */
+    background-image: url('/dip_cc/web/sites/default/files/inline-images/Menús/Plataforma2.png');
+    /* Reemplaza con la URL de tu imagen */
+    background-size: cover;
+    position: absolute;
+    left: -120px;
+    /* Ajusta según sea necesario */
+    top: 0;
+}
+
+/* Ajustar el formulario para dejar espacio para la imagen */
+.contact-message-form {
+    padding-left: 460px;
+    /* Ajusta según sea necesario */
+}
+
+
+@media (max-width: 768px) {
+
+    .contact-message-formulario-dipcc-form::before {
+        display: none;
+    }
+
+    .contact-message-form {
+        padding-left: 0px;
+        /* Ajusta según sea necesario */
+    }
+}
+
+@media (max-width: 1024px) {
+    .contact-message-formulario-dipcc-form::before {
+        display: none;
+    }
+
+    .contact-message-form {
+        padding-left: 0px;
+        /* Ajusta según sea necesario */
+    }
+}
+
+input#edit-submit {
+    background-color: #EA3D39;
+}
+
+input#edit-preview {
+	background-color: #EA3D39;
+}

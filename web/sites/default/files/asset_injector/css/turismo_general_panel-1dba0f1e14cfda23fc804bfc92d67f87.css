@@ -1,0 +1,6 @@
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above .field-item a:nth-of-type(2) {
+    text-decoration: underline;
+    /* Subraya el texto */
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}

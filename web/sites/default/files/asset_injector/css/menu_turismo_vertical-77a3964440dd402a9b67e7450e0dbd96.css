@@ -1,0 +1,92 @@
+#block-tara-menuverticales ul.menu>li {
+    margin-bottom: 15px;
+}
+
+#block-tara-menuverticales ul.menu>li>a {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+    padding: 12px 15px;
+    display: block;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+li.menu-item.menu-item-level-1.menu-item-active .is-active {
+    box-shadow: 0 11px 10px rgba(0, 0, 0, 0.1) !important;
+    background-color: #EEEEEE !important;
+}
+
+#block-tara-menuverticales ul.menu>li>a:hover {
+    color: #D11736;
+    text-decoration: none;
+}
+
+/* Estado activo o enfocado para los enlaces */
+#block-tara-menuverticales ul.menu>li>a:focus,
+#block-tara-menuverticales ul.menu>li>a:active {
+    color: #D11736;
+    outline: none;
+}
+
+#block-tara-menuobservatorio ul.menu>li {
+    margin-bottom: 15px;
+}
+
+#block-tara-menuobservatorio ul.menu>li>a {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+    padding: 12px 15px;
+    display: block;
+    background-color: #fff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#block-tara-menuobservatorio ul.menu>li>a:hover {
+    color: #D11736;
+    text-decoration: none;
+}
+
+#block-tara-menuobservatorio ul.menu>li>a:focus,
+#block-tara-menuobservatorio ul.menu>li>a:active {
+    color: #D11736;
+    outline: none;
+}
+
+#sidebar-left {
+    position: relative;
+    right: 116%;
+}
+
+/*Ajustes para pantallas móviles */
+@media (min-width: 370px) and (max-width: 800px) {
+    #sidebar-left {
+        order: 0;
+        position: relative;
+        right: 0%;
+    }
+}
+
+/*********Ajustes para version tablet**********/
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    #sidebar-left {
+        order: 0;
+        position: relative;
+        right: 24%;
+        top: 1%
+    }
+}
+
+/***********Ajustes para versión portatil*************************/
+@media (min-width: 970px) and (max-width: 1560px) {
+    #sidebar-left {
+        position: relative;
+        right: 66%;
+    }
+}

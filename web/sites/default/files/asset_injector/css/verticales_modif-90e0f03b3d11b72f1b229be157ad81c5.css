@@ -1,0 +1,147 @@
+/*Cambia estilos del botón seleccionar*/
+a.btn.btn-primary {
+    color: #fff;
+    background-color: #e62143;
+    border-color: #e62143;
+    display: inline-block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    border: none;
+    /* Sin bordes */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    cursor: pointer;
+    /* Cambia el cursor a pointer */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    /* Transiciones */
+}
+
+/*Si nos posicionamos encima del botón*/
+a.btn.btn-primary:hover {
+    background-color: #2980b9;
+    /* Color de fondo al hacer hover */
+    transform: translateY(-5px);
+    /* Mueve el botón hacia arriba */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Añade una sombra más intensa al hacer hover */
+}
+
+/*Centrar los elementos*/
+.views-view-responsive-grid__item-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* Centra el contenido horizontalmente */
+    justify-content: center;
+    /* Centra el contenido verticalmente si es necesario */
+    text-align: center;
+}
+
+.field-content img {
+    max-width: 100%;
+    /* Asegura que la imagen no se desborde */
+    height: auto;
+    /* Mantiene la proporción */
+}
+
+/* Añade  espacio entre la imagen y el botón */
+.views-field-field-boton-vertical {
+    margin-top: 0%;
+}
+
+/*Estilo recuadro verticales*/
+.views-view-responsive-grid__item {
+    width: auto;
+    border: none !important;
+    /* Borde */
+    box-shadow: none !important;
+    /* Sombra suave */
+    padding-top: 0px !important;
+    /* Espacio interno */
+    border-radius: 0px;
+    /* Esquinas redondeadas */
+}
+
+/*Estilo texto título vertical*/
+.views-field.views-field-field-titulo-vertical {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    z-index: 1;
+
+}
+
+/*Estilos texto camino de migas*/
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above a {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+    text-decoration: underline;
+    /* Subraya el texto */
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above {
+    margin-top: -1% !important;
+    margin-bottom: -7% !important;
+}
+
+#contIframepanel {
+    margin-top: -10%;
+    z-index: 0;
+    position: relative;
+}
+
+#iframe_vertical {
+    display: block;
+    margin: 0 auto;
+    overflow: hidden;
+    height: 440px;
+    width: 430px;
+    position: relative;
+    right: 49%;
+    z-index: 5
+}
+
+.iframe_container {
+    cursor: pointer;
+    height: 440px;
+    padding-bottom: 56.25%;
+    position: relative;
+    width: 230px;
+}
+
+#overlay {
+    height: 250px;
+    left: -43%;
+    position: absolute;
+    top: 10%;
+    width: 370px;
+    z-index: 10;
+}
+
+/*Ajustes para pantallas móviles */
+@media (min-width: 370px) and (max-width: 800px) {
+    .field.field--name-field-titulo-pagina.field--type-text-long.field--label-above {
+        margin-top: -3%;
+        margin-bottom: -19%;
+    }
+
+    #iframe_vertical {
+        width: 404px;
+        height: 440px;
+        display: block;
+        margin: 0 auto;
+        overflow: hidden;
+
+    }
+
+    #block-tara-views-block-vista-verticales-block-1 {
+        width: 115%;
+        position: relative;
+        right: 26px;
+    }
+}

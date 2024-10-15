@@ -1,0 +1,80 @@
+/*Añade estilos a la cabecera*/
+.header {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    height: 100px;
+}
+
+.header-top {
+    background-color: #ffffff;
+}
+
+/* Icono para cuando se oculta el menú principal*/
+.mobile-menu {
+    background-image: url(/dip_cc/web/sites/default/files/inline-images/Menús/menu-hamburguesa_2.png);
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+/*Oculta span del menú principal*/
+.mobile-menu span {
+    display: none;
+}
+
+/*Estilos al posicionarse encima del las opciones del menú principal*/
+li.menu-item.main-menu-item.menu-item-level-1 a:hover {
+    color: red;
+    background-color: white;
+    text-decoration: none;
+}
+
+/******************************************** Iconos para el menú principal*********************************/
+.main-menu .menu-item-level-1:nth-child(1)>a {
+    background: url('/dip_cc/web/sites/default/files/inline-images/Menús/house.png') no-repeat left center;
+    padding-left: 20px;
+    /* Ajusta este valor según el tamaño de la imagen */
+}
+
+.main-menu .menu-item-level-1:nth-child(2)>a {
+    background: url('/dip_cc/web/sites/default/files/inline-images/Menús/archivo.png') no-repeat left center;
+    padding-left: 20px;
+    /* Ajusta este valor según el tamaño de la imagen */
+}
+
+.main-menu .menu-item-level-1:nth-child(3)>a {
+    background: url('/dip_cc/web/sites/default/files/inline-images/Menús/chat-flecha-crecer.png') no-repeat left center;
+    padding-left: 20px;
+    /* Ajusta este valor según el tamaño de la imagen */
+}
+
+.main-menu .menu-item-level-1:nth-child(4)>a {
+    background: url('/dip_cc/web/sites/default/files/inline-images/Menús/panels.png') no-repeat left center;
+    padding-left: 20px;
+    /* Ajusta este valor según el tamaño de la imagen */
+}
+
+.main-menu .menu-item-level-1:nth-child(5)>a {
+    background: url('/dip_cc/web/sites/default/files/inline-images/Menús/door.png') no-repeat left center;
+    padding-left: 20px;
+    /* Ajusta este valor según el tamaño de la imagen */
+}
+
+/*******Ajustes para versión movil*********************************/
+@media (min-width: 370px) and (max-width: 800px) {
+    ul.main-menu.menu {
+        position: relative;
+        right: 0%;
+    }
+    .site-logo{
+        width: 139px;
+        height: 40px;
+    }
+
+}
+
+
+/*Menu
+ul.main-menu.menu {
+    position: relative;
+    right: 80%;
+}*/

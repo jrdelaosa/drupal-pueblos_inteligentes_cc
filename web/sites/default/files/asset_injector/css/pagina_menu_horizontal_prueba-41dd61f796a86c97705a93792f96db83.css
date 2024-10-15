@@ -1,0 +1,46 @@
+#highlighted {    
+    background: #EEEEEE; 
+    z-index: revert-layer;  
+}
+.main-wrapper {
+    background-color: #EEEEEE;
+}
+
+.wrapper-panel {
+    background-color: #EEEEEE;
+}
+
+#block-tara-bloqueiframegeneraldeturismo {
+    background-color: #EEEEEE;
+}
+
+.block-region.region-content {
+    background-color: #EEEEEE;
+}
+
+#breadcrumb {
+    background-color: #EEEEEE;
+}
+
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above {
+    font-family: 'Telefonica', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: black !important; 
+    z-index: 10000 !important;
+    position: relative !important; 
+    top: 43px;   
+}
+
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above .field-item a:nth-of-type(2) {
+    text-decoration: underline;
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+
+iframe#iframe_panel1 {
+    position: relative;
+    right: 3%;
+    top: -123px;
+    z-index: 1 !important;
+}

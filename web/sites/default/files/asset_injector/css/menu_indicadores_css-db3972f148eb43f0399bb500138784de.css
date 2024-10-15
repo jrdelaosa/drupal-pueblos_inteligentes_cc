@@ -1,0 +1,172 @@
+.menu-indicadores {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 70%;
+    order: 1;
+    margin-top: 30px;
+    padding-left: 10px;
+}
+
+.menu-indicadores a {
+    position: relative;
+    display: inline-block;
+    font-family: 'Telefonica', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    color: black;
+    width: 163px;
+    height: 163px;
+    text-align: center;
+    line-height: 27px;
+    padding-top: 42%;
+    background-image: url('/dip_cc/web/sites/default/files/inline-images/Menús/btn-indicadores.png');
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.menu-indicadores a:hover {
+    background-image: url('/dip_cc/web/sites/default/files/inline-images/Menús/btn-indicadores.png');
+    color: #f4313f;
+    transform: scale(1.13);
+}
+
+/*Menú botón perspectiva de genero y selcetor de municipios*/
+.menu-municipios {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 25%;
+    order: 2;
+    left: 70%;
+    bottom: 100px;
+}
+
+.menu-municipios #select-municipios {
+    position: relative;
+    padding: 10px 20px;
+    width: 100%;
+    top: 40px;
+    max-height: 47px;
+}
+
+.btn-genero {
+    background-color: #7408a3;
+    color: #fff !important;
+    border: 1px solid #7408a3;
+    margin: 0;
+    text-align: left;
+    right: 55%;
+}
+
+.btn-genero:hover {
+    background-color: #fff;
+    color: #7408a3 !important;
+    text-shadow: none;
+    text-decoration: none;
+}
+
+/*****Zonas no deseadas ocultas*************/
+.field__label {
+    display: none;
+}
+
+
+/********************Estilo fondo botón indicadores************/
+#btn-indicadores-m2 {
+    background-position: 33.33% center;
+}
+
+#btn-indicadores-m3 {
+    background-position: 66.66% center;
+
+}
+
+#btn-indicadores-m4 {
+    background-position: right center;
+}
+
+/***Fondo menú indicadores*****/
+#breadcrumb {
+    background-color: white;
+}
+
+/********Estilos para versión movil***************/
+@media (min-width: 370px) and (max-width: 800px) {
+    .menu-indicadores {
+        width: auto;
+    }
+
+    .menu-indicadores>div {
+        background-color: #EEEEEE;
+        width: 50%;
+        height: 10%;
+        margin-bottom: 10px;
+        margin: 0 auto auto 10;
+    }
+
+    .menu-indicadores a {
+        width: auto;
+        height: 60px;
+        font-size: 14px;
+        line-height: 18px;
+        padding-top: 20px;
+        text-align: center;
+        margin: 0 auto auto 10;
+        background-image: none;
+    }
+
+    .menu-indicadores a:hover {
+        background-image: none;
+        text-decoration: none;
+        transform: scale(1.05);
+    }
+
+    .menu-municipios #select-municipios {
+        width: 207%;
+        order: 1;
+        justify-content: center;
+        right: 83%;       
+        top: 68px;
+        font-size: 12px;
+    }
+
+    .btn-genero {
+        position: relative;        
+        width: 178%;
+        font-size: 12px;
+        right: 269%;
+        top: 103px;      
+    }
+
+    .btn-genero:hover{
+        position: relative;        
+        width: 182%;
+        font-size: 12px;
+        right: 269%;
+        top: 103px; 
+    }
+
+}
+
+/************Estilos para tablets***********************/
+@media (min-width: 800px) and (max-width: 1200px){
+    .menu-indicadores {        
+        width: 96%;        
+    }
+    .btn-genero {
+        position: relative;        
+        position: relative;
+        width: 127%;
+        right: 244%;
+        top: 114px;   
+    }
+    .menu-municipios #select-municipios{
+    width: 137%;
+    top: 68px;
+    max-height: 47px;
+    right: 63%;
+    }
+}

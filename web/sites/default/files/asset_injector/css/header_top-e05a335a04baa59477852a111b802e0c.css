@@ -1,0 +1,33 @@
+/*Oculta el copyright*/
+.copyright {
+    display: none;
+}
+
+/**********Color del centro************/
+.main-wrapper {
+    background-color: #FAFAFA;
+}
+
+#main {
+    background: #FAFAFA;
+}
+.block-region.region-content {
+    background-color: #FAFAFA;
+}
+
+
+.region-primary-menu .menu-item-level-1 {
+    position: relative;
+    padding: 0;
+}
+
+#last-section {
+    max-height: 1px;
+}
+.container {
+    width: 100%;
+}
+
+.block-content {
+    width: 100%;
+}

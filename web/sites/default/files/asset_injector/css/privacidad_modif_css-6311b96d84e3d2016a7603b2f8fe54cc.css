@@ -1,0 +1,115 @@
+#copyrights {
+	padding: 40px 0;
+	background-color: #DDD;
+	font-size: 14px;
+	line-height: 1.8;
+}
+
+#copyrights i.footer-icon {
+	position: relative;
+	top: 0px;
+	font-size: 14px;
+	width: 14px;
+	text-align: center;
+	margin-right: 3px;
+}
+
+.copyright-links a {
+	display: inline-block;
+	margin: 0 3px;
+	color: #333;
+	border-bottom: 1px dotted #444;
+}
+
+.copyright-links a:hover {
+	color: #555;
+	border-bottom: 1px solid #666;
+}
+
+.copyrights-menu { margin-bottom: 5px; }
+
+.copyrights-menu a {
+	font-size: 12px;
+	margin: 0 5px;
+	border-bottom: 0 !important;
+}
+
+#copyrights .col_half { margin-bottom: 0 !important; }
+
+#copyrights a:first-child { margin-left: 0; }
+
+#copyrights .tright a:last-child { margin-right: 0; }
+
+.fright { float: right !important; }
+
+.fright .top-links ul div.top-link-section,
+.top-links.fright ul div.top-link-section {
+	left: auto;
+	right: 0;
+}
+#footer_privacidad {
+	border-top: 0px;
+    background-color: #EEEEEE;
+    height: 5%;    
+}
+
+#footer_privacidad img{
+    width: 47px;
+    height: 20px;
+}
+
+.field--name-field-bloque-aviso-legal p, li{
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+
+}
+
+.subrayado {
+    text-decoration-color: #f4313f;
+    text-underline-position: under;
+}
+
+.content-wrap-politica-privacidad p{
+    font-family: Raleway, sans-serif;
+    font-size: 14px;
+}
+
+.content-wrap-politica-privacidad, .tit1, .tit2, .tit3 {
+    font-family: Raleway, sans-serif;
+    font-size: 28px;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+}
+@media (max-width: 768px) {
+		.copyrights-menu a {
+		font-size: 9px;
+		margin: 0 1px;
+		border-bottom: 0 !important;
+	}
+}
+
+@media (min-width: 768px) {
+	#footer_privacidad img{
+		width: 124px;
+		height: 50px;
+	}
+
+}
+
+
+@media (min-width: 1024px) {
+	#footer_privacidad img{
+		width: 124px;
+		height: 50px;
+	}
+	.copyrights-menu a {
+		font-size: 14px;
+		margin: 0 10px;
+		border-bottom: 0 !important;
+	}
+
+}

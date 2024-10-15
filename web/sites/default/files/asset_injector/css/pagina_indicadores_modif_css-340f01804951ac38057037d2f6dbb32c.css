@@ -1,0 +1,171 @@
+th,
+td {
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    border-top: none;
+    padding: 2px;
+    text-align: left;
+    background-color: #EEEEEE;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 25px;
+    /* Separación de 10px entre las filas */
+    width: 100%;
+}
+
+table tr {
+    box-shadow: 0 10px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+table tr td {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: black;
+    margin: 0;
+    padding: 5px 0;
+}
+
+table tr:hover {
+    transform: scale(1.05);
+    border-radius: 10px;
+    transition: transform 0.01s;
+    cursor: pointer;
+    border: #E42143 7px solid;
+}
+
+table tr td:hover {
+    color: #E42143;
+}
+
+.views-align-left {
+    text-align: center;
+}
+
+/****Recorta los margenes de las filas*/
+.image-field {
+    margin: 0 0 0rem 0;
+}
+
+/***Oculta zonas que no se desan ver**/
+#views-exposed-form-vista-indicadores-block-1 {
+    display: none;
+}
+
+.main-container {
+    background: #FAFAFA;
+}
+
+/**************Estilos titulo zona indicadores**/
+.block-title {
+    font-family: 'Telefonica', sans-serif;
+    position: relative;
+    color: transparent;
+}
+
+.block-title::before {
+    font-family: 'Telefonica', sans-serif;
+    content: 'Indicadores';
+    position: absolute;
+    left: 0;
+    text-decoration: underline;
+    text-decoration-color: #E42143;
+    white-space: nowrap;
+    font-size: 25px;
+    color: black;
+}
+
+.block-title::after {
+    content: 'encontrados';
+    position: absolute;
+    left: 135px;
+    /* Ajustar según el ancho de "Indicadores" */
+    font-size: 25px;
+    color: black;
+}
+
+/*********Estilos relacionado con los iframe**/
+
+td.views-field.views-field-field-iframe-urbo {
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.iframe-container {
+    position: relative;
+    display: none;
+    /* Oculto por defecto */
+}
+
+.iframe-container iframe {
+    width: 100%;
+    height: 1200px;
+    border: 2px solid black;
+}
+
+.close-button {
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    background-color: #c4262b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    display: none;
+    z-index: 100;
+}
+
+.main-container {
+    background: #FAFAFA;
+}
+
+#contIframe {
+    box-shadow: 0px 0px 0px;
+    z-index: 90;
+}
+
+/***********Estilos para versión movil**/
+@media (min-width: 370px) and (max-width: 800px) {
+
+    /**reduce tamaño imágenes de los indicadores***/
+    .views-field.views-field-field-img-objetivos-desarrollo-s.views-align-left .image-field {
+        width: 25px;
+        height: 25px;
+    }
+
+    td.views-field.views-field-field-img-perspectiva.views-align-left img{
+        width: 23px;
+        height: 44px;
+        position: relative;
+        left: -13%;
+    }
+
+    table tr td {
+        font-size: 10px;
+    }
+
+    .block-title {
+        font-size: 20px;
+    }
+
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+
+    td.views-field.views-field-field-img-perspectiva.views-align-left img {       
+        position: relative;
+        left: -46%
+    }
+}

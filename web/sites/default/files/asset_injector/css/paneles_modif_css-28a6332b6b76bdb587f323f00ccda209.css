@@ -1,0 +1,177 @@
+#contIframepanel {
+    position: relative;
+}
+
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above .field-item {
+    margin-top: 20px;
+    padding: 0px 0;
+}
+
+.region-highlighted .block {
+    margin: 0;
+    padding: 0px 0;
+    height: 74px;
+}
+
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above .field-item p a {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: black;
+}
+
+/****** Subrayado de color rojo camino de migas*****************/
+
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above .field-item a:nth-of-type(3) {
+    text-decoration: underline;
+    /* Subraya el texto */
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+
+/*********Posición del iframe*****************/
+iframe#iframe_panel1 {
+    position: relative;
+    right: 36%;
+    top: -42px;
+}
+
+/*************Posicionamiento del título los iframe******************/
+.field.field--name-field-titulo-iframe.field--type-text.field--label-above {
+    width: auto;
+    position: relative;
+    right: 36%
+}
+
+.field.field--name-field-titulo1-iframe.field--type-text.field--label-above {
+    width: auto;
+    position: relative;
+    right: 36%
+}
+
+.field.field--name-field-titulo2-iframe.field--type-text.field--label-above {
+    width: auto;
+    position: relative;
+    right: 36%
+}
+
+/**************Estilo título de los iframe************/
+.field.field--name-field-titulo-iframe.field--type-text.field--label-above .field-item {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-decoration: underline;
+    /* Subraya el texto */
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+
+.field.field--name-field-titulo1-iframe.field--type-text.field--label-above .field-item {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-decoration: underline;
+    /* Subraya el texto */
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+
+.field.field--name-field-titulo2-iframe.field--type-text.field--label-above .field-item {
+    font-family: 'Telefonica', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    text-decoration: underline;
+    /* Subraya el texto */
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+
+/*Ajustes para pantallas móviles */
+@media (min-width: 370px) and (max-width: 800px) { 
+
+    aside.sidebar-right {
+        position: relative !important;
+        top: 25%;
+        padding: 0;
+        left: -5%;
+    }
+
+    #sidebar-right {
+        order: 0;
+    }
+
+    .field.field--name-field-titulo-iframe.field--type-text.field--label-above {
+        position: relative;
+        left: 5%;
+    }
+
+    .field.field--name-field-titulo1-iframe.field--type-text.field--label-above {
+        position: relative;
+        left: 5%;
+    }
+
+    .field.field--name-field-titulo2-iframe.field--type-text.field--label-above {
+        position: relative;
+        left: 5%;
+    }
+
+    iframe#iframe_panel1 {
+        width: 106%;
+        left: -3%;
+    }
+}
+
+/*********Ajustes para version tablet**********/
+
+@media (min-width: 800px) and (max-width: 1200px) {   
+
+    .field.field--name-field-titulo-iframe.field--type-text.field--label-above {
+        position: relative;
+        left: -7%;
+        top: -8px;
+    }
+
+    .field.field--name-field-titulo1-iframe.field--type-text.field--label-above {
+        position: relative;
+        left: 7%;
+        top: -44px;
+    }
+
+    .field.field--name-field-titulo2-iframe.field--type-text.field--label-above {
+        position: relative;
+        left: 7%;
+        top: -44px;
+    }
+
+    iframe#iframe_panel1 {
+        width: 113%;
+        left: -8%;
+    }
+
+}
+
+/***********Ajustes para versión portatil*************************/
+@media (min-width: 970px) and (max-width: 1560px) {
+    iframe#iframe_panel1 {
+        width: 140%;
+        left: -20%;
+    } 
+
+    .field.field--name-field-titulo-iframe.field--type-text.field--label-above {
+        position: relative;
+        right: 20%;
+    }
+
+    .field.field--name-field-titulo1-iframe.field--type-text.field--label-above {
+        position: relative;
+        right: 20%;
+    }
+
+    .field.field--name-field-titulo2-iframe.field--type-text.field--label-above {
+        position: relative;
+        right: 20%;
+    }
+}
