@@ -2,25 +2,65 @@
 
 namespace Drupal\entity_pdf\Form;
 
+use Drupal\Core\Config\ConfigFactoryInterface;
+use Drupal\Core\Config\TypedConfigManagerInterface;
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Render\Element;
-use Drupal\entity_pdf\Plugin\EntityPdfRenderingEngineInterface;
 use Drupal\entity_pdf\Service\EntityPdfGenerator;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
+/**
+ * The Entity Pdf Setting form.
+ */
 class EntityPdfSettingsForm extends ConfigFormBase {
+
+  /**
+   * The Entity PDF Generator service.
+   */
+  protected EntityPdfGenerator $entityPdfGenerator;
+
+  /**
+   * Constructs a EntityPdfSettingsForm object.
+   *
+   * @param \Drupal\Core\Config\ConfigFactoryInterface $config_factory
+   *   The factory for configuration objects.
+   * @param \Drupal\entity_pdf\Service\EntityPdfGenerator $entity_pdf_generator
+   *   The Entity PDF Generator service.
+   * @param \Drupal\Core\Config\TypedConfigManagerInterface|null $typedConfigManager
+   *   The typed config manager.
+   */
+  public function __construct(
+    ConfigFactoryInterface $config_factory,
+    EntityPdfGenerator $entity_pdf_generator,
+    TypedConfigManagerInterface|null $typedConfigManager = NULL,
+  ) {
+    parent::__construct($config_factory, $typedConfigManager);
+    $this->entityPdfGenerator = $entity_pdf_generator;
+  }
 
   /**
    * {@inheritdoc}
    */
-  public function getFormId() {
+  public static function create(ContainerInterface $container) {
+    return new static(
+      $container->get('config.factory'),
+      $container->get('entity_pdf.generator'),
+      $container->get('config.typed')
+    );
+  }
+
+  /**
+   * {@inheritdoc}
+   */
+  public function getFormId(): string {
     return 'entity_pdf_settings';
   }
 
   /**
    * {@inheritdoc}
    */
-  protected function getEditableConfigNames() {
+  protected function getEditableConfigNames(): array {
     return [
       'entity_pdf.settings',
     ];
@@ -29,7 +69,7 @@ class EntityPdfSettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function buildForm(array $form, FormStateInterface $form_state) {
+  public function buildForm(array $form, FormStateInterface $form_state): array {
     $config = $this->config('entity_pdf.settings');
 
     $form['filename'] = [
@@ -53,34 +93,31 @@ class EntityPdfSettingsForm extends ConfigFormBase {
       '#description' => $this->t('Open in the browser instead of downloading. Can be reverted in specific cases by adding ?inline=1 to a pdf links'),
     ];
 
-    /** @var EntityPdfGenerator */
-    $generator = \Drupal::service('entity_pdf.generator');
     $engines = [];
-    foreach ($generator->getRenderingEngines() as $engine) {
-      /** @var EntityPdfRenderingEngineInterface $engine */
+    foreach ($this->entityPdfGenerator->getRenderingEngines() as $engine) {
+      /** @var \Drupal\entity_pdf\Plugin\EntityPdfRenderingEngineInterface $engine */
       $engines[$engine->getPluginId()] = $engine->getName();
     }
     $form['renderingEngine'] = [
       '#type' => 'select',
       '#title' => $this->t('Rendering Engine'),
       '#options' => $engines,
-      '#default_value' => $config->get('renderingEngine') ?: $generator->getRenderingEngine()->getPluginId(),
+      '#default_value' => $config->get('renderingEngine') ?: $this->entityPdfGenerator->getRenderingEngine()->getPluginId(),
       '#description' => $this->t('Select a pdf rendering engine. Modules could provide new rendering engines with EntityPdfRenderingEngine plugins.'),
     ];
-    foreach ($generator->getRenderingEngines() as $engine) {
-      /** @var EntityPdfRenderingEngineInterface $engine */
+    foreach ($this->entityPdfGenerator->getRenderingEngines() as $engine) {
       $configurableRenderingOptions = $engine->getConfigurableOptions();
       if (!empty($configurableRenderingOptions)) {
         $form['renderingEngineOptions'] = $form['renderingEngineOptions'] ?? [
           '#type' => 'vertical_tabs',
           '#title' => $this->t('Settings'),
-          '#tree' => true,
+          '#tree' => TRUE,
         ];
         $form['renderingEngineOptions'][$engine->getPluginId()] = [
           '#type' => 'details',
           '#title' => $this->t('Options for @pdf_rendering_engine', ['@pdf_rendering_engine' => $engine->getName()]),
           '#group' => 'renderingEngineOptions',
-          '#tree' => true,
+          '#tree' => TRUE,
         ];
         $engine->overrideSettingsForm($form['renderingEngineOptions'][$engine->getPluginId()], $form_state);
         $renderingOptions = $engine->getRenderingOptions();
@@ -99,20 +136,19 @@ class EntityPdfSettingsForm extends ConfigFormBase {
   /**
    * {@inheritdoc}
    */
-  public function submitForm(array &$form, FormStateInterface $form_state) {
+  public function submitForm(array &$form, FormStateInterface $form_state): void {
     $config = $this->config('entity_pdf.settings');
     $config->set('filename', $form_state->getValue('filename'));
     $config->set('tempDir', $form_state->getValue('tempDir'));
     $config->set('openInBrowser', $form_state->getValue('openInBrowser'));
     $config->set('renderingEngine', $form_state->getValue('renderingEngine'));
 
-    /** @var EntityPdfGenerator */
-    $generator = \Drupal::service('entity_pdf.generator');
     $renderingEngineOptions = [];
-    foreach ($generator->getRenderingEngines() as $engine) {
-      /** @var EntityPdfRenderingEngineInterface $engine */
+    foreach ($this->entityPdfGenerator->getRenderingEngines() as $engine) {
       if (!empty($engine->getConfigurableOptions())) {
-        $renderingEngineOptions[$engine->getPluginId()] = $form_state->getValue(['renderingEngineOptions', $engine->getPluginId()]);
+        $renderingEngineOptions[$engine->getPluginId()] = $form_state->getValue([
+          'renderingEngineOptions', $engine->getPluginId(),
+        ]);
         $engine->overrideSettingsFormSubmit($form['renderingEngineOptions'][$engine->getPluginId()], $form_state);
       }
     }

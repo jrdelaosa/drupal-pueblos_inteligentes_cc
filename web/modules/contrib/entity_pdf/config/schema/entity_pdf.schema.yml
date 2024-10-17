@@ -9,7 +9,7 @@ entity_pdf.settings:
       type: string
       label: 'Path to temporary directory.'
     openInBrowser:
-      type: string
+      type: boolean
       label: 'Open in the browser instead of downloading.'
     renderingEngine:
       type: string

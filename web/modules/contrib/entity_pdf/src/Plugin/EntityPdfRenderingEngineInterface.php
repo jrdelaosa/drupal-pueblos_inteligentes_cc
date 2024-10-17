@@ -18,52 +18,103 @@ interface EntityPdfRenderingEngineInterface extends PluginInspectionInterface {
    * @return string
    *   Name of the EntityPdfRenderingEngine.
    */
-  public function getName();
+  public function getName(): string;
 
   /**
-   * Return PDF content
+   * Gets the object for this Print engine.
+   *
+   * Note, it is not advised that you use this method if you want your code to
+   * work generically across all print engines.
+   *
+   * @return object
+   *   The implementation specific print object being used.
+   */
+  public function getPrintObject(): object;
+
+  /**
+   * Return PDF content.
+   *
+   * @param string $output
+   *   (HTML string)
+   * @param \Drupal\Core\Entity\EntityInterface|null $entity
+   *   The entity.
+   * @param string|null $filename
+   *   The filename.
+   * @param string|null $langcode
+   *   The langcode.
+   * @param \Drupal\Core\Render\BubbleableMetadata|null $bubbleableMetadata
+   *   The bubbleable Metadata.
+   *
+   * @return string
+   *   The generated PDF html string.
    *
    * @see \Drupal\entity_pdf\Service\EntityPdfGenerator
-   *
-   * @param string $output (HTML string)
-   * @param EntityInterface|null $entity
-   * @param string|null $filename
-   * @param string|null $langcode
-   * @param \Drupal\Core\Render\BubbleableMetadata|null $bubbleableMetadata
-   * @return string
    */
-  public function generatePdf($output, $entity = null, $filename = null, $langcode = null, ?BubbleableMetadata $bubbleableMetadata = null);
+  public function generatePdf(string $output, ?EntityInterface $entity = NULL, ?string $filename = NULL, ?string $langcode = NULL, ?BubbleableMetadata $bubbleableMetadata = NULL): string;
 
   /**
-   * Return configured options
+   * Stream PDF content to the Client, with a specific file name.
+   *
+   * @param string|null $filename
+   *   The filename (or null).
+   *
+   * @see \Drupal\entity_pdf\Service\EntityPdfGenerator
+   */
+  public function streamPdf(?string $filename = NULL);
+
+  /**
+   * Return configured options.
    *
    * @return array
+   *   The configurations array.
    */
-  public function getRenderingOptions();
+  public function getRenderingOptions(): array;
 
   /**
    * Return configurable options (with default values)
    *
    * @return array
+   *   The configurations array.
    */
-  public function getConfigurableOptions();
+  public function getConfigurableOptions(): array;
 
   /**
-   * Override entity_pdf settings form
-   *
-   * @param array &$form
-   * @param FormStateInterface $form_state
-   * @return array
+   * Add a new page to the Rendering Engine PDF.
    */
-  public function overrideSettingsForm(array &$form, FormStateInterface $form_state);
+  public function addPage();
 
   /**
-   * Override entity_pdf settings form
+   * Add a string of HTML content to the Rendering Engine PDF.
+   *
+   * @param string $content
+   *   The string of HTML to add.
+   */
+  public function addContent(string $content);
+
+  /**
+   * Override entity_pdf settings form.
    *
    * @param array &$form
-   * @param FormStateInterface $form_state
+   *   The form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   *
    * @return array
+   *   The override form.
    */
-  public function overrideSettingsFormSubmit(array &$form, FormStateInterface $form_state);
+  public function overrideSettingsForm(array &$form, FormStateInterface $form_state): array;
+
+  /**
+   * Override entity_pdf settings form.
+   *
+   * @param array &$form
+   *   The form.
+   * @param \Drupal\Core\Form\FormStateInterface $form_state
+   *   The form state.
+   *
+   * @return array
+   *   The override settings form.
+   */
+  public function overrideSettingsFormSubmit(array &$form, FormStateInterface $form_state): array;
 
 }

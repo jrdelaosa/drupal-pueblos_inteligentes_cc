@@ -3,66 +3,86 @@
 namespace Drupal\entity_pdf\Plugin;
 
 use Drupal\Component\Plugin\PluginBase;
+use Drupal\Core\Config\Config;
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Plugin\ContainerFactoryPluginInterface;
+use Drupal\entity_pdf\Service\EntityPdfGenerator;
+use Symfony\Component\DependencyInjection\ContainerInterface;
 
 /**
  * Base class for EntityPdfRenderingEngine plugins.
  */
-abstract class EntityPdfRenderingEngineBase extends PluginBase implements EntityPdfRenderingEngineInterface {
+abstract class EntityPdfRenderingEngineBase extends PluginBase implements EntityPdfRenderingEngineInterface, ContainerFactoryPluginInterface {
 
   /**
-   * @var ModuleHandlerInterface|null
+   * The Print builder service.
    */
-  protected $moduleHandler = null;
+  protected EntityPdfGenerator $entityPdfGenerator;
 
   /**
-   * @var EntityPdfGenerator|null
+   * The entity_pdf.settings configuration.
    */
-  protected $generator = null;
+  protected Config $config;
 
   /**
-   * @return ModuleHandlerInterface
+   * Constructor of a EntityPdfRenderingEngineBase object.
    */
-  public function getModuleHandler() {
-    if ($this->moduleHandler === null) {
-      $this->moduleHandler = \Drupal::moduleHandler();
-    }
-    return $this->moduleHandler;
+  public function __construct(array $configuration, $plugin_id, $plugin_definition, EntityPdfGenerator $entity_pdf_generator) {
+    parent::__construct($configuration, $plugin_id, $plugin_definition);
+    $this->entityPdfGenerator = $entity_pdf_generator;
+    $this->config = $this->entityPdfGenerator->getConfig();
   }
 
   /**
-   * @return EntityPdfGenerator
+   * {@inheritdoc}
    */
-  public function getGenerator() {
-    if ($this->generator === null) {
-      $this->generator = \Drupal::service('entity_pdf.generator');
-    }
-    return $this->generator;
+  public static function create(ContainerInterface $container, array $configuration, $plugin_id, $plugin_definition) {
+    return new static(
+      $configuration,
+      $plugin_id,
+      $plugin_id,
+      $plugin_definition,
+      $container->get('entity_pdf.generator'),
+    );
   }
 
-  /** @inheritDoc */
-  public function getName() {
+  /**
+   * {@inheritdoc}
+   */
+  public function getName(): string {
     return $this->getPluginDefinition()['label'];
   }
 
-  /** @inheritDoc */
-  public function getRenderingOptions() {
-    $options = $this->getGenerator()->getConfig()->get('renderingEngineOptions.' . $this->getPluginId()) ?: [];
+  /**
+   * {@inheritdoc}
+   */
+  public function getRenderingOptions(): array {
+    $options = $this->config->get('renderingEngineOptions.' . $this->getPluginId()) ?: [];
     foreach ($this->getConfigurableOptions() as $key => $default) {
       $options[$key] = $options[$key] ?? $default;
     }
     return $options;
   }
 
-  /** @inheritDoc */
-  public function getConfigurableOptions() {
+  /**
+   * {@inheritdoc}
+   */
+  public function getConfigurableOptions(): array {
     return [];
   }
 
-  /** @inheritDoc */
-  public function overrideSettingsForm(array &$form, FormStateInterface $form_state) {}
+  /**
+   * {@inheritdoc}
+   */
+  public function overrideSettingsForm(array &$form, FormStateInterface $form_state): array {
+    return [];
+  }
 
-  /** @inheritDoc */
-  public function overrideSettingsFormSubmit(array &$form, FormStateInterface $form_state) {}
+  /**
+   * {@inheritdoc}
+   */
+  public function overrideSettingsFormSubmit(array &$form, FormStateInterface $form_state): array {
+    return [];
+  }
 
 }

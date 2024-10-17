@@ -2,15 +2,14 @@
 
 namespace Drupal\entity_pdf\Plugin;
 
-use Drupal\Core\Plugin\DefaultPluginManager;
 use Drupal\Core\Cache\CacheBackendInterface;
 use Drupal\Core\Extension\ModuleHandlerInterface;
+use Drupal\Core\Plugin\DefaultPluginManager;
 
 /**
  * Provides the EntityPdfRenderingEngine plugin manager.
  */
 class EntityPdfRenderingEngineManager extends DefaultPluginManager {
-
 
   /**
    * Constructs a new EntityPdfRenderingEngineManager object.

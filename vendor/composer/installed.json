@@ -1057,17 +1057,17 @@
         },
         {
             "name": "doctrine/common",
-            "version": "3.4.4",
-            "version_normalized": "3.4.4.0",
+            "version": "3.4.5",
+            "version_normalized": "3.4.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a"
+                "reference": "6c8fef961f67b8bc802ce3e32e3ebd1022907286"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a",
-                "reference": "0aad4b7ab7ce8c6602dfbb1e1a24581275fb9d1a",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/6c8fef961f67b8bc802ce3e32e3ebd1022907286",
+                "reference": "6c8fef961f67b8bc802ce3e32e3ebd1022907286",
                 "shasum": ""
             },
             "require": {
@@ -1084,7 +1084,7 @@
                 "symfony/phpunit-bridge": "^6.1",
                 "vimeo/psalm": "^4.4"
             },
-            "time": "2024-04-16T13:35:33+00:00",
+            "time": "2024-10-08T15:53:43+00:00",
             "type": "library",
             "installation-source": "dist",
             "autoload": {
@@ -1131,7 +1131,7 @@
             ],
             "support": {
                 "issues": "https://github.com/doctrine/common/issues",
-                "source": "https://github.com/doctrine/common/tree/3.4.4"
+                "source": "https://github.com/doctrine/common/tree/3.4.5"
             },
             "funding": [
                 {
@@ -1563,6 +1563,78 @@
             "install-path": "../../web/modules/contrib/admin_toolbar"
         },
         {
+            "name": "drupal/cookies",
+            "version": "1.2.0",
+            "version_normalized": "1.2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/cookies.git",
+                "reference": "1.2.0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/cookies-1.2.0.zip",
+                "reference": "1.2.0",
+                "shasum": "7da0accf78ab97dbeef6969127c3b1390d094390"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9 || ^10",
+                "jfeltkamp/cookiesjsr": "^1.0.12"
+            },
+            "require-dev": {
+                "drupal/asset_injector": "^2",
+                "drupal/facebook_pixel": "^2.0",
+                "drupal/google_analytics": "^4.0",
+                "drupal/google_tag": "^1.0",
+                "drupal/ivw_integration": "^2.0",
+                "drupal/matomo": "^1.0",
+                "drupal/media_entity_instagram": "^3.0",
+                "drupal/media_entity_twitter": "^2.0",
+                "drupal/recaptcha": "^3.0"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "1.2.0",
+                    "datestamp": "1670599773",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Anybody",
+                    "homepage": "https://www.drupal.org/user/291091"
+                },
+                {
+                    "name": "grevil",
+                    "homepage": "https://www.drupal.org/user/3668491"
+                },
+                {
+                    "name": "JFeltkamp",
+                    "homepage": "https://www.drupal.org/user/2471686"
+                },
+                {
+                    "name": "thomas.frobieter",
+                    "homepage": "https://www.drupal.org/user/409335"
+                }
+            ],
+            "description": "Cookie consent tool.",
+            "homepage": "https://www.drupal.org/project/cookies",
+            "support": {
+                "source": "http://cgit.drupalcode.org/cookies",
+                "issues": "https://www.drupal.org/project/issues/cookies"
+            },
+            "install-path": "../../web/modules/contrib/cookies"
+        },
+        {
             "name": "drupal/core",
             "version": "10.3.6",
             "version_normalized": "10.3.6.0",
@@ -1980,28 +2052,28 @@
         },
         {
             "name": "drupal/entity_pdf",
-            "version": "2.0.6",
-            "version_normalized": "2.0.6.0",
+            "version": "2.1.2",
+            "version_normalized": "2.1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/entity_pdf.git",
-                "reference": "2.0.6"
+                "reference": "2.1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/entity_pdf-2.0.6.zip",
-                "reference": "2.0.6",
-                "shasum": "7ec6d9b9efd427b523e6e038b0efa7ce67c239a1"
+                "url": "https://ftp.drupal.org/files/projects/entity_pdf-2.1.2.zip",
+                "reference": "2.1.2",
+                "shasum": "19a1443c3f9aa2b050e7ce8e5e83ccb83547a82d"
             },
             "require": {
-                "drupal/core": "^9.3 || ^10",
+                "drupal/core": "^9.3 || ^10 || 11",
                 "mpdf/mpdf": "^8.0"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "2.0.6",
-                    "datestamp": "1710948307",
+                    "version": "2.1.2",
+                    "datestamp": "1728542987",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2015,6 +2087,10 @@
             ],
             "authors": [
                 {
+                    "name": "itamair",
+                    "homepage": "https://www.drupal.org/user/1179076"
+                },
+                {
                     "name": "weseze",
                     "homepage": "https://www.drupal.org/user/417521"
                 }
@@ -2025,6 +2101,82 @@
                 "source": "https://git.drupalcode.org/project/entity_pdf"
             },
             "install-path": "../../web/modules/contrib/entity_pdf"
+        },
+        {
+            "name": "drupal/eu_cookie_compliance",
+            "version": "1.25.0",
+            "version_normalized": "1.25.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.drupalcode.org/project/eu-cookie-compliance.git",
+                "reference": "8.x-1.25"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://ftp.drupal.org/files/projects/eu_cookie_compliance-8.x-1.25.zip",
+                "reference": "8.x-1.25",
+                "shasum": "13797a009ba899db0d9bd9a5c5ad0eb4b2bedfb1"
+            },
+            "require": {
+                "drupal/core": "^8.9 || ^9 || ^10 || ^11"
+            },
+            "type": "drupal-module",
+            "extra": {
+                "drupal": {
+                    "version": "8.x-1.25",
+                    "datestamp": "1728547905",
+                    "security-coverage": {
+                        "status": "covered",
+                        "message": "Covered by Drupal's security advisory policy"
+                    }
+                }
+            },
+            "installation-source": "dist",
+            "notification-url": "https://packages.drupal.org/8/downloads",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Marcin Pajdzik",
+                    "homepage": "https://www.drupal.org/u/marcin-pajdzik",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Sven Berg Ryen",
+                    "homepage": "https://www.drupal.org/u/svenryen",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Neslee Canil Pinto",
+                    "homepage": "https://www.drupal.org/u/neslee-canil-pinto",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "See other contributors",
+                    "homepage": "https://www.drupal.org/node/1538032/committers"
+                },
+                {
+                    "name": "svenryen",
+                    "homepage": "https://www.drupal.org/user/667244"
+                }
+            ],
+            "description": "This module aims at making the website compliant with the new EU cookie regulation.",
+            "homepage": "https://drupal.org/project/eu_cookie_compliance",
+            "keywords": [
+                "Cookie",
+                "CookieCompliance",
+                "Drupal",
+                "GDPR"
+            ],
+            "support": {
+                "source": "https://git.drupalcode.org/project/eu-cookie-compliance",
+                "docs": "https://www.drupal.org/docs/contributed-modules/eu-cookie-compliance",
+                "forum": "https://drupal.stackexchange.com/search?q=eu+cookie+compliance",
+                "issues": "https://www.drupal.org/project/issues/eu_cookie_compliance?version=8.x",
+                "slack": "https://app.slack.com/client/T06GX3JTS/C012XBTH81E"
+            },
+            "install-path": "../../web/modules/contrib/eu_cookie_compliance"
         },
         {
             "name": "drupal/token",
@@ -2103,17 +2255,17 @@
         },
         {
             "name": "drush/drush",
-            "version": "13.2.0",
-            "version_normalized": "13.2.0.0",
+            "version": "13.3.0",
+            "version_normalized": "13.3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/drush-ops/drush.git",
-                "reference": "6a3f0cfe0abab49f42e83602469049506d75035d"
+                "reference": "881a2bd6c99aafaba5274d2244037d1738c2473d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/drush-ops/drush/zipball/6a3f0cfe0abab49f42e83602469049506d75035d",
-                "reference": "6a3f0cfe0abab49f42e83602469049506d75035d",
+                "url": "https://api.github.com/repos/drush-ops/drush/zipball/881a2bd6c99aafaba5274d2244037d1738c2473d",
+                "reference": "881a2bd6c99aafaba5274d2244037d1738c2473d",
                 "shasum": ""
             },
             "require": {
@@ -2157,9 +2309,10 @@
                 "rector/rector": "^1",
                 "squizlabs/php_codesniffer": "^3.7"
             },
-            "time": "2024-09-10T13:16:15+00:00",
+            "time": "2024-10-08T11:42:23+00:00",
             "bin": [
-                "drush"
+                "drush",
+                "drush.php"
             ],
             "type": "library",
             "extra": {
@@ -2241,7 +2394,7 @@
                 "issues": "https://github.com/drush-ops/drush/issues",
                 "security": "https://github.com/drush-ops/drush/security/advisories",
                 "slack": "https://drupal.slack.com/messages/C62H9CWQM",
-                "source": "https://github.com/drush-ops/drush/tree/13.2.0"
+                "source": "https://github.com/drush-ops/drush/tree/13.3.0"
             },
             "funding": [
                 {
@@ -2771,17 +2924,17 @@
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.26.0",
-            "version_normalized": "11.26.0.0",
+            "version": "v11.28.1",
+            "version_normalized": "11.28.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "4d333ea19a27230b424b9af56f34cd658b5bbce2"
+                "reference": "2d99ccbb19e34450508ff3ab2f62ba90aa2e9793"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/4d333ea19a27230b424b9af56f34cd658b5bbce2",
-                "reference": "4d333ea19a27230b424b9af56f34cd658b5bbce2",
+                "url": "https://api.github.com/repos/illuminate/collections/zipball/2d99ccbb19e34450508ff3ab2f62ba90aa2e9793",
+                "reference": "2d99ccbb19e34450508ff3ab2f62ba90aa2e9793",
                 "shasum": ""
             },
             "require": {
@@ -2793,7 +2946,7 @@
             "suggest": {
                 "symfony/var-dumper": "Required to use the dump method (^7.0)."
             },
-            "time": "2024-09-27T14:54:48+00:00",
+            "time": "2024-10-10T19:23:07+00:00",
             "type": "library",
             "extra": {
                 "branch-alias": {
@@ -2829,8 +2982,8 @@
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.26.0",
-            "version_normalized": "11.26.0.0",
+            "version": "v11.28.1",
+            "version_normalized": "11.28.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -2878,8 +3031,8 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.26.0",
-            "version_normalized": "11.26.0.0",
+            "version": "v11.28.1",
+            "version_normalized": "11.28.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -2929,8 +3082,8 @@
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.26.0",
-            "version_normalized": "11.26.0.0",
+            "version": "v11.28.1",
+            "version_normalized": "11.28.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -2975,6 +3128,36 @@
                 "source": "https://github.com/laravel/framework"
             },
             "install-path": "../illuminate/macroable"
+        },
+        {
+            "name": "jfeltkamp/cookiesjsr",
+            "version": "1.0.13",
+            "version_normalized": "1.0.13.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jfeltkamp/cookiesjsr.git",
+                "reference": "a25132aadb01975cbe77dc7746fd5cf15f06d246"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jfeltkamp/cookiesjsr/zipball/a25132aadb01975cbe77dc7746fd5cf15f06d246",
+                "reference": "a25132aadb01975cbe77dc7746fd5cf15f06d246",
+                "shasum": ""
+            },
+            "time": "2022-03-25T09:05:23+00:00",
+            "type": "drupal-library",
+            "installation-source": "dist",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "description": "Cookie consent tool.",
+            "homepage": "https://github.com/jfeltkamp/cookiesjsr",
+            "support": {
+                "issues": "https://github.com/jfeltkamp/cookiesjsr/issues",
+                "source": "https://github.com/jfeltkamp/cookiesjsr.git"
+            },
+            "install-path": "../../web/libraries/cookiesjsr"
         },
         {
             "name": "laravel/prompts",
@@ -3491,17 +3674,17 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v5.3.0",
-            "version_normalized": "5.3.0.0",
+            "version": "v5.3.1",
+            "version_normalized": "5.3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "3abf7425cd284141dc5d8d14a9ee444de3345d1a"
+                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/3abf7425cd284141dc5d8d14a9ee444de3345d1a",
-                "reference": "3abf7425cd284141dc5d8d14a9ee444de3345d1a",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/8eea230464783aa9671db8eea6f8c6ac5285794b",
+                "reference": "8eea230464783aa9671db8eea6f8c6ac5285794b",
                 "shasum": ""
             },
             "require": {
@@ -3514,7 +3697,7 @@
                 "ircmaxell/php-yacc": "^0.0.7",
                 "phpunit/phpunit": "^9.0"
             },
-            "time": "2024-09-29T13:56:26+00:00",
+            "time": "2024-10-08T18:51:32+00:00",
             "bin": [
                 "bin/php-parse"
             ],
@@ -3546,7 +3729,7 @@
             ],
             "support": {
                 "issues": "https://github.com/nikic/PHP-Parser/issues",
-                "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.0"
+                "source": "https://github.com/nikic/PHP-Parser/tree/v5.3.1"
             },
             "install-path": "../nikic/php-parser"
         },

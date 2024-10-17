@@ -1,6 +1,11 @@
 <?php
 
 /**
+ * @file
+ * Entity PDF Module Install file.
+ */
+
+/**
  * Install default config.
  */
 function entity_pdf_update_8001() {
@@ -10,7 +15,7 @@ function entity_pdf_update_8001() {
 }
 
 /**
- * Add default config for tempDir
+ * Add default config for tempDir.
  */
 function entity_pdf_update_8002() {
   \Drupal::configFactory()->getEditable('entity_pdf.settings')
@@ -19,7 +24,7 @@ function entity_pdf_update_8002() {
 }
 
 /**
- * Add default config for openInBrowser
+ * Add default config for openInBrowser.
  */
 function entity_pdf_update_8003() {
   \Drupal::configFactory()->getEditable('entity_pdf.settings')
@@ -28,7 +33,7 @@ function entity_pdf_update_8003() {
 }
 
 /**
- * Initialize default rendering engine
+ * Initialize default rendering engine.
  */
 function entity_pdf_update_8010() {
   $config = \Drupal::configFactory()->getEditable('entity_pdf.settings');
