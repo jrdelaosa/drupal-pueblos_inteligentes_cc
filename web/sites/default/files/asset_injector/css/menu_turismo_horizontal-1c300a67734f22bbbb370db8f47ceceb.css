@@ -1,0 +1,119 @@
+#select-observatorio{
+	display:none;
+}
+li.menu-item.menu-item-level-1.menu-item-active .is-active {
+    background-color: #EEEEEE !important; /* Cambiar a un azul más oscuro al hacer hover */    
+}
+/* Hace que el menú sea horizontal */
+#block-tara-menuturismohorizontal .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;     
+}
+
+/* Estilo para cada ítem del menú */
+#block-tara-menuturismohorizontal .menu-item {
+    margin: 0 10px;
+    box-shadow: 5px 5px 10px 3px rgba(20, 17, 17, 0.3);
+     border: 1px solid #FAFAFA; /* Borde más oscuro */
+    border-radius: 3px;
+}
+
+/* Estilo para los enlaces dentro de los ítems */
+#block-tara-menuturismohorizontal .menu-item a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #FAFAFA; /* Azul claro */
+    color: #000; /* Color del texto */
+    text-decoration: none;
+    /*border: 1px solid #0077b6; /* Borde más oscuro */
+    /*border-radius: 3px; /* Bordes redondeados */
+    transition: background-color 0.3s ease; /* Animación suave al hacer hover */
+}
+
+/* Cambiar color al hacer hover */
+#block-tara-menuturismohorizontal .menu-item a:hover {
+    color: #D11736;    
+}
+
+#block-tara-menuobservatoriohorizontal {
+    position: relative;
+    top: 22px;
+}
+
+#block-tara-menuobservatoriohorizontal .menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+
+}
+
+#block-tara-menuobservatoriohorizontal .menu-item {
+    margin: 0 10px;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.3);
+}
+
+#block-tara-menuobservatoriohorizontal .menu-item a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #FAFAFA;
+    /* Azul claro */
+    color: #000;
+    /* Color del texto */
+    text-decoration: none;
+    border: 1px solid #FAFAFA;
+    /* Borde más oscuro */
+    border-radius: 4px;
+    /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+    /* Animación suave al hacer hover */
+}
+
+#block-tara-menuobservatoriohorizontal .menu-item a:hover{    
+    color: #D11736;    
+}
+
+
+@media (min-width: 370px) and (max-width: 800px){
+    #select-observatorio {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 10px;
+    }    
+    #block-tara-menuobservatoriohorizontal{
+        display: none;
+    }
+    iframe#iframe_panel1 {
+        width: 106%;
+        left: -3%;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {  
+    #select-observatorio {
+        display: block;
+        margin: 0 auto;
+    }    
+    #block-tara-menuobservatoriohorizontal{
+        display: none !important;
+    }
+    iframe#iframe_panel1 {
+        width: 106%;
+        left: -3%;
+    }
+
+}
+
+@media (min-width: 800px) and (max-width: 1200px) { 
+    #select-observatorio {
+        display: block;
+        margin: 0 auto;
+        position: relative;
+        top: 10px;
+    } 
+}

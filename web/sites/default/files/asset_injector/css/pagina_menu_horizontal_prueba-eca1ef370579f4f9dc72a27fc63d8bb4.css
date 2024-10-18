@@ -1,0 +1,65 @@
+#highlighted {    
+    background: #EEEEEE; 
+    z-index: revert-layer;  
+}
+.main-wrapper {
+    background-color: #EEEEEE;
+}
+
+.wrapper-panel {
+    background-color: #EEEEEE;
+}
+
+#block-tara-bloqueiframegeneraldeturismo {
+    background-color: #EEEEEE;
+}
+
+.block-region.region-content {
+    background-color: #EEEEEE;
+}
+
+#breadcrumb {
+    background-color: #EEEEEE;
+}
+
+.region-highlighted .block {
+    margin: 0;
+    padding: 0px 0;
+    height: 74px;
+}
+
+#block-tara-observatoriocaminodemigas{
+    position: relative !important; 
+    z-index: 10000 !important; 
+    top: 45px !important;   
+}
+
+#block-tara-observatoriocaminodemigas p a{
+    font-family: 'Telefonica', sans-serif !important;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: black !important; 
+    
+}
+
+.field.field--name-field-titulo-pagina.field--type-text-long.field--label-above .field-item a:nth-of-type(2) {
+    text-decoration: underline;
+    text-decoration-color: #E61A3E;
+    text-decoration-thickness: 2px;
+}
+
+iframe#iframe_panel1 {
+    position: relative;
+    right: 3%;
+    top: -78px;
+    z-index: 1 !important;
+}
+
+@media (min-width: 370px) and (max-width: 800px){
+    #block-tara-observatoriocaminodemigas{      
+        top: 0px !important;   
+    }
+    .header { 
+        height: 65px;
+    }
+}
